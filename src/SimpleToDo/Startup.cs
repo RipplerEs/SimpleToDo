@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RipplerES.CommandHandler;
 using SimpleToDo.Data;
 using SimpleToDo.Models;
 using SimpleToDo.Services;
@@ -22,7 +23,8 @@ namespace SimpleToDo
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("config.json");
 
             if (env.IsDevelopment())
             {
@@ -57,6 +59,9 @@ namespace SimpleToDo
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            var bootstrapper = new BootStrapper(services, Configuration);
+            services.AddSingleton(new Dispatcher(bootstrapper.CreateServiceProvider()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

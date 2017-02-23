@@ -1,37 +1,61 @@
-﻿using System;
-using RipplerES.CommandHandler;
+﻿using RipplerES.CommandHandler;
 
 #region Aliases
 using Result = RipplerES.CommandHandler.IAggregateCommandResult<SimpleToDo.Aggregates.ToDoItem>;
 #endregion
 
-// ReSharper disable once CheckNamespace
 namespace SimpleToDo.Aggregates
 {
     public class ToDoItem : AggregateBase<ToDoItem>
     {
-        #region State
-        private class State
-        {
-            private Guid _owner;
+        private ToDoItemState _toDoItemState;
 
-            public State(Guid owner)
-            {
-                _owner = owner;
-            }
-        }
-        #endregion
-
-        private State _state;
-
+        #region Create
         public Result Execute(CreateFor command)
         {
+            if (!_toDoItemState.Exists()) return Error(new ToDoItemNotFound());
             return Success(new CreatedFor(userRef: command.UserRef));
         }
 
         public void Apply(CreatedFor @event)
         {
-            _state = new State(@event.USerRef);
+            _toDoItemState = new ToDoItemState(@event.UserRef);
         }
+        #endregion
+
+        #region Set Description
+        public Result Execute(SetDescription command)
+        {
+            if (!_toDoItemState.Exists()) return Error(new ToDoItemNotFound());
+            if (!_toDoItemState.IsAuthorized(command.UserRef)) return Error(new ToDoItemAccessDenied());
+            if (_toDoItemState.IsComplete()) return Error(new CannotChangeToDoItemDescriptionWhenComplete());
+            if (string.IsNullOrWhiteSpace(command.DescriptionText))
+            {
+                return Error(new ToDoItemDescriptionCannotBeEmpty());
+            }
+
+            return Success(new DescriptionSet(descriptionText: command.DescriptionText, 
+                                              userRef: command.UserRef));
+        }
+
+        public void Apply(DescriptionSet @event)
+        {
+            _toDoItemState.SetDescriptionText(@event.DescriptionText);
+        }
+        
+        #endregion
+
+        #region Complete
+        Result Execute(CompleteToDoItem command)
+        {
+            {
+                if (!_toDoItemState.Exists()) return Error(new ToDoItemNotFound());
+                if (!_toDoItemState.IsAuthorized(command.UserRef)) return Error(new ToDoItemAccessDenied());
+                if (!_toDoItemState.IsDescriptionTextSet()) return Error(new ToDoItemDescriptionTextNotSet());
+
+                return Success(new ToDoItemCompleted(userRef: command.UserRef));
+            }
+        }
+        #endregion
     }
 }

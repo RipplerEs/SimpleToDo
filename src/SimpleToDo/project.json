@@ -41,10 +41,13 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc":  {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "SimpleToDo.Aggregates": "1.0.0-*",
+    "RipplerES.Repositories.SqlServer": "1.8.2",
+    "RippleES.Serialization.Json": "1.8.2"
   },
 
   "tools": {
@@ -62,7 +65,7 @@
   },
 
   "frameworks": {
-    "netcoreapp1.0": {
+    "netcoreapp2.0": {
       "imports": [
         "dotnet5.6",
         "portable-net45+win8"

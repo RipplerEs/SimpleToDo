@@ -4,7 +4,7 @@
 using Result= RipplerES.CommandHandler.IAggregateCommandResult<SimpleToDo.Aggregates.User>;
 #endregion
 
-// ReSharper disable All
+
 namespace SimpleToDo.Aggregates
 {
     public class User : AggregateBase<User>

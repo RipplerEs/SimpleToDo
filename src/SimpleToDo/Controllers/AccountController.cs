@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using RipplerES.CommandHandler;
+using SimpleToDo.Aggregates;
 using SimpleToDo.Models;
 using SimpleToDo.Models.AccountViewModels;
 using SimpleToDo.Services;
@@ -21,6 +23,7 @@ namespace SimpleToDo.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
+        private readonly Dispatcher _dispatcher;
         private readonly ILogger _logger;
 
         public AccountController(
@@ -28,12 +31,14 @@ namespace SimpleToDo.Controllers
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
+            Dispatcher dispatcher,
             ILoggerFactory loggerFactory)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
+            _dispatcher = dispatcher;
             _logger = loggerFactory.CreateLogger<AccountController>();
         }
 
@@ -109,6 +114,9 @@ namespace SimpleToDo.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    _dispatcher.Execute(Guid.Parse(user.Id), 
+                                        -1, // New Aggregate 
+                                        new Register(userName: user.UserName));
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
                     // Send an email with this link
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

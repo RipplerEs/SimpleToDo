@@ -2,7 +2,7 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETStandard,Version=v2.0": {
+    ".NETCoreApp,Version=v2.0": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -288,10 +288,10 @@
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
-          "lib/netstandard2.0/RipplerES.CommandHandler.dll": {}
+          "lib/netcoreapp1.0/RipplerES.CommandHandler.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/RipplerES.CommandHandler.dll": {}
+          "lib/netcoreapp1.0/RipplerES.CommandHandler.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1095,7 +1095,7 @@
           "System.Runtime.Handles": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Runtime.InteropServices.dll": {}
+          "ref/netcoreapp1.1/System.Runtime.InteropServices.dll": {}
         }
       },
       "System.Runtime.InteropServices.RuntimeInformation/4.3.0": {
@@ -1397,15 +1397,10 @@
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
+          "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.6/System.Text.RegularExpressions.dll": {}
+          "ref/netcoreapp1.1/System.Text.RegularExpressions.dll": {}
         },
         "runtime": {
           "lib/netstandard1.6/System.Text.RegularExpressions.dll": {}
@@ -1819,7 +1814,7 @@
       ]
     },
     "RipplerES.CommandHandler/1.8.2": {
-      "sha512": "jt+OGnNSTn1ataftX1/IXN+On4qkQvmyckLTdQrIqzp0NQX5q/+k6xPGR2QE2NY54tp4uGyVA9c3g010+oelXg==",
+      "sha512": "nRyHVpZIepVU8JVRmWbGqn9rXTogRKfO4soB+VGtjP9M72P8HkVm1xm7eiWRPM4v44BPoHXrD1E/mf3sl7vwAA==",
       "type": "package",
       "path": "RipplerES.CommandHandler/1.8.2",
       "files": [
@@ -5204,7 +5199,7 @@
       "NETStandard.Library >= 1.6.1",
       "RipplerES.CommandHandler >= 1.8.2"
     ],
-    ".NETStandard,Version=v2.0": []
+    ".NETCoreApp,Version=v2.0": []
   },
   "tools": {},
   "projectFileToolGroups": {}
