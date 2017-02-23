@@ -26,7 +26,12 @@ namespace SimpleToDo.Aggregates
 
         public Result Execute(CreateFor command)
         {
-            return Success()
+            return Success(new CreatedFor(userRef: command.UserRef));
+        }
+
+        public void Apply(CreatedFor @event)
+        {
+            _state = new State(@event.USerRef);
         }
     }
 }
