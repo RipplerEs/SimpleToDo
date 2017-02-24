@@ -1,0 +1,23 @@
+--temp-output:C:\Users\douce\Documents\GitHub\SimpleToDo\src\SimpleToDo.ViewMaterializer\obj\Debug\net461\
+--out:C:\Users\douce\Documents\GitHub\SimpleToDo\src\SimpleToDo.ViewMaterializer\bin\Debug\net461\SimpleToDo.ViewMaterializer.exe
+--define:DEBUG
+--define:TRACE
+--define:NET461
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:x64
+--optimize:False
+--emit-entry-point:True
+--output-name:SimpleToDo.ViewMaterializer
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.6.1
+--reference:C:\Users\douce\.nuget\packages\Topshelf\4.0.3\lib\net452\Topshelf.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll
+C:\Users\douce\Documents\GitHub\SimpleToDo\src\SimpleToDo.ViewMaterializer\Program.cs
+C:\Users\douce\Documents\GitHub\SimpleToDo\src\SimpleToDo.ViewMaterializer\Properties\AssemblyInfo.cs

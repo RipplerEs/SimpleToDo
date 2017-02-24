@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0/",
-    "signature": "09171ec256d224be3c8a1122daef3874594b8fe4"
+    "signature": "14b3bbcb45a1ae137508737aada2de66d61ab1cd"
   },
   "compilationOptions": {
     "defines": [
@@ -29,7 +29,7 @@
           "Microsoft.AspNetCore.StaticFiles": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
           "Microsoft.Extensions.Logging": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
@@ -37,8 +37,8 @@
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
           "SimpleToDo.Aggregates": "1.0.0",
-          "RipplerES.Repositories.SqlServer": "1.8.2",
-          "RippleES.Serialization.Json": "1.8.2"
+          "RipplerES.Repositories.SqlServer": "1.8.3",
+          "RippleES.Serialization.Json": "1.8.3"
         },
         "compile": {
           "SimpleToDo.dll": {}
@@ -50,7 +50,7 @@
           "System.Collections.Concurrent": "4.3.0",
           "System.Collections.NonGeneric": "4.0.1",
           "System.Data.SqlClient": "4.1.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Emit": "4.3.0",
@@ -417,7 +417,7 @@
           "System.Reflection.Extensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0"
         },
         "compile": {
@@ -580,7 +580,7 @@
           "Microsoft.Extensions.WebEncoders": "1.0.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Buffers": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1"
+          "System.Runtime.Serialization.Primitives": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {}
@@ -721,7 +721,7 @@
           "System.Diagnostics.FileVersionInfo": "4.0.0",
           "System.Diagnostics.StackTrace": "4.0.1",
           "System.Diagnostics.Tools": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
           "System.IO.FileSystem.Primitives": "4.3.0",
@@ -772,7 +772,7 @@
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
@@ -916,14 +916,14 @@
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Json/1.0.0": {
+      "Microsoft.Extensions.Configuration.Json/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "9.0.1",
-          "System.Dynamic.Runtime": "4.0.11",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1"
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll": {}
@@ -931,7 +931,7 @@
       },
       "Microsoft.Extensions.Configuration.UserSecrets/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Json": "1.0.0"
+          "Microsoft.Extensions.Configuration.Json": "1.1.0"
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
@@ -960,7 +960,7 @@
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0"
         },
         "compile": {
@@ -1201,7 +1201,7 @@
           "System.ComponentModel.Annotations": "4.1.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
           "System.Diagnostics.Process": "4.1.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
           "System.IO.FileSystem.Watcher": "4.3.0",
           "System.IO.MemoryMappedFiles": "4.0.0",
@@ -1255,7 +1255,7 @@
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
@@ -1368,7 +1368,7 @@
           "Microsoft.CSharp": "4.0.1",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO": "4.3.0",
           "System.Linq": "4.3.0",
@@ -1379,7 +1379,7 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
@@ -1410,21 +1410,21 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
-      "RippleES.Serialization.Json/1.8.2": {
+      "RippleES.Serialization.Json/1.8.3": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "9.0.1",
-          "RipplerES.CommandHandler": "1.8.2"
+          "RipplerES.CommandHandler": "1.8.3"
         },
         "compile": {
           "lib/netcoreapp1.0/RippleES.Serialization.Json.dll": {}
         }
       },
-      "RipplerES.CommandHandler/1.8.2": {
+      "RipplerES.CommandHandler/1.8.3": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "Microsoft.Extensions.DependencyInjection": "1.1.0",
           "NETStandard.Library": "1.6.1"
         },
@@ -1432,14 +1432,14 @@
           "lib/netcoreapp1.0/RipplerES.CommandHandler.dll": {}
         }
       },
-      "RipplerES.Repositories.SqlServer/1.8.2": {
+      "RipplerES.Repositories.SqlServer/1.8.3": {
         "dependencies": {
           "Dapper": "1.50.2",
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "RipplerES.CommandHandler": "1.8.2",
+          "RipplerES.CommandHandler": "1.8.3",
           "RipplerES.SubscriptionHandler": "1.8.2"
         },
         "compile": {
@@ -1450,7 +1450,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -1844,11 +1844,10 @@
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
         }
       },
-      "System.Dynamic.Runtime/4.0.11": {
+      "System.Dynamic.Runtime/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
           "System.ObjectModel": "4.3.0",
@@ -2536,7 +2535,7 @@
           "ref/netstandard1.1/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "dependencies": {
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -2815,7 +2814,7 @@
           "System.Collections.Concurrent": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.Tracing": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -2966,7 +2965,7 @@
       "SimpleToDo.Aggregates/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "RipplerES.CommandHandler": "1.8.2"
+          "RipplerES.CommandHandler": "1.8.3"
         },
         "compile": {
           "SimpleToDo.Aggregates.dll": {}
@@ -2989,7 +2988,7 @@
           "Microsoft.AspNetCore.StaticFiles": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
           "Microsoft.Extensions.Logging": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
@@ -2997,8 +2996,8 @@
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
           "SimpleToDo.Aggregates": "1.0.0",
-          "RipplerES.Repositories.SqlServer": "1.8.2",
-          "RippleES.Serialization.Json": "1.8.2"
+          "RipplerES.Repositories.SqlServer": "1.8.3",
+          "RippleES.Serialization.Json": "1.8.3"
         },
         "runtime": {
           "SimpleToDo.dll": {}
@@ -3010,7 +3009,7 @@
           "System.Collections.Concurrent": "4.3.0",
           "System.Collections.NonGeneric": "4.0.1",
           "System.Data.SqlClient": "4.1.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Emit": "4.3.0",
@@ -3377,7 +3376,7 @@
           "System.Reflection.Extensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0"
         },
         "runtime": {
@@ -3540,7 +3539,7 @@
           "Microsoft.Extensions.WebEncoders": "1.0.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Buffers": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1"
+          "System.Runtime.Serialization.Primitives": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {}
@@ -3681,7 +3680,7 @@
           "System.Diagnostics.FileVersionInfo": "4.0.0",
           "System.Diagnostics.StackTrace": "4.0.1",
           "System.Diagnostics.Tools": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
           "System.IO.FileSystem.Primitives": "4.3.0",
@@ -3735,7 +3734,7 @@
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
@@ -3879,14 +3878,14 @@
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Json/1.0.0": {
+      "Microsoft.Extensions.Configuration.Json/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "9.0.1",
-          "System.Dynamic.Runtime": "4.0.11",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1"
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll": {}
@@ -3894,7 +3893,7 @@
       },
       "Microsoft.Extensions.Configuration.UserSecrets/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Json": "1.0.0"
+          "Microsoft.Extensions.Configuration.Json": "1.1.0"
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
@@ -3923,7 +3922,7 @@
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0"
         },
         "runtime": {
@@ -4164,7 +4163,7 @@
           "System.ComponentModel.Annotations": "4.1.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
           "System.Diagnostics.Process": "4.1.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
           "System.IO.FileSystem.Watcher": "4.3.0",
           "System.IO.MemoryMappedFiles": "4.0.0",
@@ -4218,7 +4217,7 @@
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
@@ -4325,7 +4324,7 @@
           "Microsoft.CSharp": "4.0.1",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO": "4.3.0",
           "System.Linq": "4.3.0",
@@ -4336,7 +4335,7 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
@@ -4367,21 +4366,21 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
-      "RippleES.Serialization.Json/1.8.2": {
+      "RippleES.Serialization.Json/1.8.3": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "9.0.1",
-          "RipplerES.CommandHandler": "1.8.2"
+          "RipplerES.CommandHandler": "1.8.3"
         },
         "runtime": {
           "lib/netcoreapp1.0/RippleES.Serialization.Json.dll": {}
         }
       },
-      "RipplerES.CommandHandler/1.8.2": {
+      "RipplerES.CommandHandler/1.8.3": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "Microsoft.Extensions.DependencyInjection": "1.1.0",
           "NETStandard.Library": "1.6.1"
         },
@@ -4389,14 +4388,14 @@
           "lib/netcoreapp1.0/RipplerES.CommandHandler.dll": {}
         }
       },
-      "RipplerES.Repositories.SqlServer/1.8.2": {
+      "RipplerES.Repositories.SqlServer/1.8.3": {
         "dependencies": {
           "Dapper": "1.50.2",
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "RipplerES.CommandHandler": "1.8.2",
+          "RipplerES.CommandHandler": "1.8.3",
           "RipplerES.SubscriptionHandler": "1.8.2"
         },
         "runtime": {
@@ -4407,7 +4406,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
           "NETStandard.Library": "1.6.1"
         },
         "runtime": {
@@ -4783,11 +4782,10 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Dynamic.Runtime/4.0.11": {
+      "System.Dynamic.Runtime/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
           "System.ObjectModel": "4.3.0",
@@ -5409,7 +5407,7 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "dependencies": {
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -5670,7 +5668,7 @@
           "System.Collections.Concurrent": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.Tracing": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
+          "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -5824,7 +5822,7 @@
       "SimpleToDo.Aggregates/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "RipplerES.CommandHandler": "1.8.2"
+          "RipplerES.CommandHandler": "1.8.3"
         },
         "runtime": {
           "SimpleToDo.Aggregates.dll": {}
@@ -5841,7 +5839,7 @@
     "Dapper/1.50.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA=="
+      "sha512": "sha512-4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA=="
     },
     "Libuv/1.9.0": {
       "type": "package",
@@ -6163,10 +6161,10 @@
       "serviceable": true,
       "sha512": "sha512-jZRdMHops4npC8qKFEmqw6QODfA5h50sUYBIyB31DICzYSp+IQyvf5yb1zwW2x1EFuUEMv+aWZi1WDDc7JPdqA=="
     },
-    "Microsoft.Extensions.Configuration.Json/1.0.0": {
+    "Microsoft.Extensions.Configuration.Json/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KRyEOe5/Xi3qyDMdEVh++e2pQRsI6C3wzINVExOcu9lOsFmXK/k4qOf244fyo59rnn6s5xKnIW3WbhxWS1hu2w=="
+      "sha512": "sha512-QmHQbrOoVxXblM2x9NzGPbX3XpQGTCXiO6jZghx4KqUxPfJMS0VgBlgOUnLAz7sJyx3GvhUG6SEX6Xz70dpwDw=="
     },
     "Microsoft.Extensions.Configuration.UserSecrets/1.0.0": {
       "type": "package",
@@ -6363,25 +6361,25 @@
       "serviceable": true,
       "sha512": "sha512-IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw=="
     },
-    "RippleES.Serialization.Json/1.8.2": {
+    "RippleES.Serialization.Json/1.8.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jZWdltJLXB++MEOK0ULGj/notAd5edjwXjcyn3KrQLfvckT9+Xd5gL0hNU5CRBnC1BArRUMLP42T1IvclSXtBQ=="
+      "sha512": "sha512-EWut6oiULvNQrRv/c/y0BqVoejG6juhy1W0zl20igHs+QpAtqvhPSYvYcw6RLqs9WWKSP7EdZi/laLPVDRdmiw=="
     },
-    "RipplerES.CommandHandler/1.8.2": {
+    "RipplerES.CommandHandler/1.8.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nRyHVpZIepVU8JVRmWbGqn9rXTogRKfO4soB+VGtjP9M72P8HkVm1xm7eiWRPM4v44BPoHXrD1E/mf3sl7vwAA=="
+      "sha512": "sha512-BtjGQKZxflGNwNoKc93w73P3P7zh45bvFGIvG3RKmQA0m4gnZRcihQFh255v20vJKD1du5YEkmn0hVHfypJTdA=="
     },
-    "RipplerES.Repositories.SqlServer/1.8.2": {
+    "RipplerES.Repositories.SqlServer/1.8.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6LjJNLNevSACUOGgjazb+ylxckRLgGntJJAkJTOPBUHmzdyu5SrlLuszJpC73eRowZsqtvv2tvb9rGN7kKLPqw=="
+      "sha512": "sha512-cidEXt1HfzMr4Q14+NmnSjZT8la6JAm9NsCQO0M+Vz+7YEkVbd8UzsKN0K1/iLDS3/S7zXkDsolwgnAxFzslZg=="
     },
     "RipplerES.SubscriptionHandler/1.8.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KxHlb/u0swHEYuOL9Tj5doPaOUqEZfPZR2pI12EaGeVhE5jF3iYvelFE5W6qKVOIIzb486QEwBH29ij9sjzcyQ=="
+      "sha512": "sha512-HKnnGGOu0ztsaz2pGQzalVpODXwLWKMtOETtT0pqXpi4pbXSHAchYXxuDWkeL+ukJyImljOZX3WqGOpEiw19cg=="
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -6598,10 +6596,10 @@
       "serviceable": true,
       "sha512": "sha512-rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw=="
     },
-    "System.Dynamic.Runtime/4.0.11": {
+    "System.Dynamic.Runtime/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-db34f6LHYM0U0JpE+sOmjar27BnqTVkbLJhgfwMpTdgTigG/Hna3m2MYVwnFzGGKnEJk2UXFuoVTr8WUbU91/A=="
+      "sha512": "sha512-SNVi1E/vfWUAs/WYKhE9+qlS6KqK0YVhnlT0HQtr8pMIA8YX3lwy3uPMownDwdYISBdmAF/2holEIldVp85Wag=="
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -6833,10 +6831,10 @@
       "serviceable": true,
       "sha512": "sha512-yMH+MfdzHjy17l2KESnPiF2dwq7T+xLnSJar7slyimAkUh/gTrS9/UQOtv7xarskJ2/XDSNvfLGOBQPjL7PaHQ=="
     },
-    "System.Runtime.Serialization.Primitives/4.1.1": {
+    "System.Runtime.Serialization.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg=="
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw=="
     },
     "System.Security.Claims/4.0.1": {
       "type": "package",

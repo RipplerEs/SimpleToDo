@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{253C5998-0885-4C6D-8634-B8BD1FA991EE}"
-	ProjectSection(SolutionItems) = preProject
-		Config.json = Config.json
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E01ECCFD-98A3-4785-993E-1DABED2950C4}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,6 +13,8 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleToDo", "src\SimpleToDo\SimpleToDo.xproj", "{CBE42A20-6D9E-4E81-A622-07206987A2A4}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleToDo.Aggregates", "src\SimpleToDo.Aggregates\SimpleToDo.Aggregates.xproj", "{5C900600-25F7-411B-87A6-49B920A4F26D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleToDo.ViewMaterializer", "src\SimpleToDo.ViewMaterializer\SimpleToDo.ViewMaterializer.xproj", "{E33DD9F7-B2CF-4EED-A217-AA5A8B39F03C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,11 +30,17 @@ Global
 		{5C900600-25F7-411B-87A6-49B920A4F26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C900600-25F7-411B-87A6-49B920A4F26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C900600-25F7-411B-87A6-49B920A4F26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33DD9F7-B2CF-4EED-A217-AA5A8B39F03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33DD9F7-B2CF-4EED-A217-AA5A8B39F03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33DD9F7-B2CF-4EED-A217-AA5A8B39F03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33DD9F7-B2CF-4EED-A217-AA5A8B39F03C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CBE42A20-6D9E-4E81-A622-07206987A2A4} = {253C5998-0885-4C6D-8634-B8BD1FA991EE}
+		{5C900600-25F7-411B-87A6-49B920A4F26D} = {253C5998-0885-4C6D-8634-B8BD1FA991EE}
+		{E33DD9F7-B2CF-4EED-A217-AA5A8B39F03C} = {253C5998-0885-4C6D-8634-B8BD1FA991EE}
 	EndGlobalSection
 EndGlobal

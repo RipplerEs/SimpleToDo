@@ -278,7 +278,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RipplerES.CommandHandler/1.8.2": {
+      "RipplerES.CommandHandler/1.8.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
@@ -1813,12 +1813,12 @@
         "tools/install.ps1"
       ]
     },
-    "RipplerES.CommandHandler/1.8.2": {
-      "sha512": "nRyHVpZIepVU8JVRmWbGqn9rXTogRKfO4soB+VGtjP9M72P8HkVm1xm7eiWRPM4v44BPoHXrD1E/mf3sl7vwAA==",
+    "RipplerES.CommandHandler/1.8.3": {
+      "sha512": "BtjGQKZxflGNwNoKc93w73P3P7zh45bvFGIvG3RKmQA0m4gnZRcihQFh255v20vJKD1du5YEkmn0hVHfypJTdA==",
       "type": "package",
-      "path": "RipplerES.CommandHandler/1.8.2",
+      "path": "RipplerES.CommandHandler/1.8.3",
       "files": [
-        "RipplerES.CommandHandler.1.8.2.nupkg.sha512",
+        "RipplerES.CommandHandler.1.8.3.nupkg.sha512",
         "RipplerES.CommandHandler.nuspec",
         "lib/net46/RipplerES.CommandHandler.dll",
         "lib/net461/RipplerES.CommandHandler.dll",
@@ -5197,7 +5197,7 @@
   "projectFileDependencyGroups": {
     "": [
       "NETStandard.Library >= 1.6.1",
-      "RipplerES.CommandHandler >= 1.8.2"
+      "RipplerES.CommandHandler >= 1.8.3"
     ],
     ".NETCoreApp,Version=v2.0": []
   },

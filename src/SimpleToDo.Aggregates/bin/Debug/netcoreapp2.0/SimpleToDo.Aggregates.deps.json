@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0/",
-    "signature": "e241da4a89e8ad1fee23c042f3eb4e861700e0ed"
+    "signature": "67c6a58eca1abbf2c0304fc21518b892ba28d927"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,7 +10,7 @@
       "SimpleToDo.Aggregates/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "RipplerES.CommandHandler": "1.8.2"
+          "RipplerES.CommandHandler": "1.8.3"
         },
         "runtime": {
           "SimpleToDo.Aggregates.dll": {}
@@ -222,7 +222,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RipplerES.CommandHandler/1.8.2": {
+      "RipplerES.CommandHandler/1.8.3": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
@@ -1079,10 +1079,10 @@
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw=="
     },
-    "RipplerES.CommandHandler/1.8.2": {
+    "RipplerES.CommandHandler/1.8.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nRyHVpZIepVU8JVRmWbGqn9rXTogRKfO4soB+VGtjP9M72P8HkVm1xm7eiWRPM4v44BPoHXrD1E/mf3sl7vwAA=="
+      "sha512": "sha512-BtjGQKZxflGNwNoKc93w73P3P7zh45bvFGIvG3RKmQA0m4gnZRcihQFh255v20vJKD1du5YEkmn0hVHfypJTdA=="
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

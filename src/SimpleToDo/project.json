@@ -30,7 +30,7 @@
       "type": "build"
     },
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
     "Microsoft.Extensions.Logging": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
@@ -46,8 +46,8 @@
       "type": "build"
     },
     "SimpleToDo.Aggregates": "1.0.0-*",
-    "RipplerES.Repositories.SqlServer": "1.8.2",
-    "RippleES.Serialization.Json": "1.8.2"
+    "RipplerES.Repositories.SqlServer": "1.8.3",
+    "RippleES.Serialization.Json": "1.8.3"
   },
 
   "tools": {
