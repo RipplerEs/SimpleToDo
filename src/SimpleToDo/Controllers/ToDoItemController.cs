@@ -59,7 +59,7 @@ namespace SimpleToDo.Controllers
             var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var result = _dispatcher.Execute(id,
                                              version,
-                                             new CompleteToDoItem(userRef: currentUserId));
+                                             new Complete(userRef: currentUserId));
 
             var error = result as CommandErrorResult<ToDoItem>;
             if (error != null)

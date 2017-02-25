@@ -3,12 +3,14 @@ using RipplerES.CommandHandler;
 
 namespace SimpleToDo.Aggregates
 {
-    public class CompleteToDoItem : IAggregateCommand<ToDoItem>
+    public class Completed : IAggregateEvent<ToDoItem>
     {
         public Guid UserRef { get; }
-        public CompleteToDoItem(Guid userRef)
+
+        public Completed(Guid userRef)
         {
             UserRef = userRef;
+            throw new NotImplementedException();
         }
     }
 }

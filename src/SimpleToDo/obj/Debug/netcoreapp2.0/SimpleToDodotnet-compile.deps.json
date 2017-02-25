@@ -5839,7 +5839,7 @@
     "Dapper/1.50.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA=="
+      "sha512": "sha512-PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA=="
     },
     "Libuv/1.9.0": {
       "type": "package",
@@ -6379,7 +6379,7 @@
     "RipplerES.SubscriptionHandler/1.8.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HKnnGGOu0ztsaz2pGQzalVpODXwLWKMtOETtT0pqXpi4pbXSHAchYXxuDWkeL+ukJyImljOZX3WqGOpEiw19cg=="
+      "sha512": "sha512-KxHlb/u0swHEYuOL9Tj5doPaOUqEZfPZR2pI12EaGeVhE5jF3iYvelFE5W6qKVOIIzb486QEwBH29ij9sjzcyQ=="
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

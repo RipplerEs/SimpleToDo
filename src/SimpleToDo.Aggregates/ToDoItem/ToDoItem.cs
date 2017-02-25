@@ -46,14 +46,14 @@ namespace SimpleToDo.Aggregates
         #endregion
 
         #region Complete
-        Result Execute(CompleteToDoItem command)
+        Result Execute(Complete command)
         {
             {
                 if (!_toDoItemState.Exists()) return Error(new ToDoItemNotFound());
                 if (!_toDoItemState.IsAuthorized(command.UserRef)) return Error(new ToDoItemAccessDenied());
                 if (!_toDoItemState.IsDescriptionTextSet()) return Error(new ToDoItemDescriptionTextNotSet());
 
-                return Success(new ToDoItemCompleted(userRef: command.UserRef));
+                return Success(new Completed(userRef: command.UserRef));
             }
         }
         #endregion
