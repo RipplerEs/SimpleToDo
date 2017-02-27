@@ -6,10 +6,10 @@ using SimpleToDo.ViewMaterializer.Views;
 
 namespace SimpleToDo.ViewMaterializer
 {
-    public abstract class ToDoItemViewEventHandler : IEventHandler
+    public abstract class ToDoItemViewEventHandler
     {
-        private readonly ViewDataContex _viewRepository;
-        protected ToDoItemViewEventHandler(ViewDataContex viewRepository)
+        private readonly ViewDataContext _viewRepository;
+        protected ToDoItemViewEventHandler(ViewDataContext viewRepository)
         {
             _viewRepository = viewRepository;
         }

@@ -1,9 +1,14 @@
 using System;
+using System.Linq;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using RipplerES.CommandHandler;
 using SimpleToDo.Aggregates;
+using SimpleToDo.Data;
+using SimpleToDo.Models;
+using SimpleToDo.Models.ToDoItem;
 
 namespace SimpleToDo.Controllers
 {
@@ -12,45 +17,45 @@ namespace SimpleToDo.Controllers
     public class ToDoItemController : Controller
     {
         private readonly Dispatcher _dispatcher;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ApplicationDbContext _dbContext;
 
         public ToDoItemController(Dispatcher dispatcher,
-                                  IHttpContextAccessor httpContextAccessor)
+            ApplicationDbContext dbContext)
         {
             _dispatcher = dispatcher;
-            _httpContextAccessor = httpContextAccessor;
+            _dbContext = dbContext;
         }
+
 
         [HttpPost]
-        public ActionResult Create()
+        public ActionResult SetDescription(NewToDoItem toDoItem)
         {
-            var toDoItemId = Guid.NewGuid();
-            var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var result = _dispatcher.Execute(toDoItemId, -1, new CreateFor(userRef: currentUserId));
+            var id = Guid.NewGuid();
+            var version = -1;
 
-            var error = result as CommandErrorResult<ToDoItem>;
-            if (error != null)
-            {
-                throw new RipplerAggregateException(error);
-            }
-            return Ok(toDoItemId);
-        }
+            //var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            //var result = _dispatcher.Execute(id, version,
+            //    new SetDescription(userRef: currentUserId,
+            //        descriptionText: toDoItem.Description));
 
-        [HttpPut]
-        public ActionResult SetDescription(Guid id, int version, string descriptionText)
-        {
-            var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var result = _dispatcher.Execute(id, 
-                                             version, 
-                                             new SetDescription(userRef: currentUserId, 
-                                                                descriptionText: descriptionText));
+            //var error = result as CommandErrorResult<ToDoItem>;
+            //if (error != null)
+            //{
+            //    throw new RipplerAggregateException(error);
+            //}
 
-            var error = result as CommandErrorResult<ToDoItem>;
-            if (error != null)
-            {
-                throw new RipplerAggregateException(error);
-            }
-            return Ok();
+            //var newVersion = 0;
+            //ToDoItemView fetched = null;
+
+            //while (version < newVersion)
+            //{
+            //    fetched = _dbContext.ToDoItems.SingleOrDefault(c => c.Id == id);
+            //    if (fetched != null)
+            //        newVersion = fetched.Version;
+            //}
+
+
+            return Ok();//Json(fetched);
         }
 
         [HttpPut]
@@ -58,8 +63,8 @@ namespace SimpleToDo.Controllers
         {
             var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var result = _dispatcher.Execute(id,
-                                             version,
-                                             new Complete(userRef: currentUserId));
+                version,
+                new Complete(userRef: currentUserId));
 
             var error = result as CommandErrorResult<ToDoItem>;
             if (error != null)
@@ -67,6 +72,15 @@ namespace SimpleToDo.Controllers
                 throw new RipplerAggregateException(error);
             }
             return Ok();
+        }
+
+        [HttpGet]
+        public ActionResult GetToDoItems()
+        {
+            var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var data = _dbContext.ToDoItems.Where(c => c.Owner == currentUserId);
+
+            return Json(data);
         }
     }
 }

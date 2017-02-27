@@ -7,12 +7,13 @@
 
   "dependencies": {
     "Microsoft.EntityFrameworkCore": "1.1.0",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"
     },
-    "RipplerES.SubscriptionHandler": "1.8.2",
-    "RipplerES.Repositories.SqlServer": "1.8.2"
+    "RipplerES.SubscriptionHandler": "1.8.3",
+    "RipplerES.Repositories.SqlServer": "1.8.3"
   },
 
   "frameworks": {

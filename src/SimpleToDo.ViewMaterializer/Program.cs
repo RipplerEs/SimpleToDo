@@ -9,27 +9,26 @@ namespace SimpleToDo.ViewMaterializer
 {
     public class Program
     {
-        private static readonly Guid _channel = 
+        private static readonly Guid Channel = 
             Guid.Parse("{7BECADD8-32EA-400E-AEA7-E8B75957CAED}");
 
         public static void Main(string[] args)
         {
-
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("Config.json");
 
 
-            var viewDataContext = new ViewDataContex();
+            var viewDataContext = new ViewDataContext();
             var subscriptionHandler = new SubscriptionHandler(
-                    _channel,
+                    Channel,
                     "ToDoListView",
                     new SqlServerSubscriptionRepository(builder.Build()),
-                    new ITypedEventHandler[]
+                    new IEventHandler[]
                     {
-                        new HandleCreatedFor(viewDataContext),
                         new HandleSetDescription(viewDataContext),
-                        new HandleCompleted(viewDataContext),  
-                    }, null);
+                        new HandleCompleted(viewDataContext),
+                        new UnhandledEventHandler(viewDataContext)
+                    });
 
             subscriptionHandler.Initialize();
             while (true)

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SimpleToDo.Aggregates;
 using SimpleToDo.Models;
+using SimpleToDo.Models.ToDoItem;
 
 namespace SimpleToDo.Data
 {
@@ -22,5 +24,7 @@ namespace SimpleToDo.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<ToDoItemView> ToDoItems { get; set; }
     }
 }

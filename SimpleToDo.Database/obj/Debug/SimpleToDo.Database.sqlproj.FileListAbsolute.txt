@@ -1,0 +1,9 @@
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\bin\Debug\SimpleToDo.Database.dacpac
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\bin\Debug\SimpleToDo.Database.dll
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\bin\Debug\SimpleToDo.Database.pdb
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\Model.xml
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\refactor.xml
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\postdeploy.sql
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\predeploy.sql
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.dll
+C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.pdb

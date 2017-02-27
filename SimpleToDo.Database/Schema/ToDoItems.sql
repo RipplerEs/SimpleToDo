@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ToDoItems]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Version] INT NOT NULL, 
+    [Description] VARCHAR(MAX) NULL, 
+    [IsComplete] BIT NOT NULL DEFAULT 0, 
+    [Owner] UNIQUEIDENTIFIER NOT NULL
+)

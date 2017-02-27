@@ -5,9 +5,9 @@ using SimpleToDo.ViewMaterializer.Views;
 
 namespace SimpleToDo.ViewMaterializer
 {
-    public class HandleSetDescription: ToDoItemViewEventHandler, ITypedEventHandler
+    public class HandleSetDescription: ToDoItemViewEventHandler, IEventHandler
     {
-        public HandleSetDescription(ViewDataContex viewRepository) : base(viewRepository)
+        public HandleSetDescription(ViewDataContext viewRepository) : base(viewRepository)
         {
         }
 
@@ -18,9 +18,16 @@ namespace SimpleToDo.ViewMaterializer
             view.Owner = json.Owner;
             view.Description = json.DescriptionText;
         }
-        public bool CanHandle(string eventType)
+
+        public bool CanHandle(string aggregateType, string eventType)
         {
-            return eventType == "SimpleToDo.Aggregates.SetDescription, SimpleToDo.Aggregates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+            return aggregateType == "SimpleToDo.Aggregates.ToDoItem, SimpleToDo.Aggregates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            && eventType == "SimpleToDo.Aggregates.SetDescription, SimpleToDo.Aggregates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+        }
+
+        public bool CanHandle(string aggregateType)
+        {
+            return false;
         }
     }
 }

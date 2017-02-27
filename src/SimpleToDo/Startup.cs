@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using RipplerES.CommandHandler;
 using SimpleToDo.Data;
@@ -71,6 +74,7 @@ namespace SimpleToDo
             loggerFactory.AddDebug();
 
             app.UseApplicationInsightsRequestTelemetry();
+            app.UseStaticFiles();
 
             if (env.IsDevelopment())
             {
@@ -84,13 +88,9 @@ namespace SimpleToDo
             }
 
             app.UseApplicationInsightsExceptionTelemetry();
-
-            app.UseStaticFiles();
-
             app.UseIdentity();
 
-            // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
-
+            // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715           
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
