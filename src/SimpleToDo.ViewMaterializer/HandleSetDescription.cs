@@ -15,14 +15,14 @@ namespace SimpleToDo.ViewMaterializer
         {
             dynamic json = JObject.Parse(data);
             view.Version = version;
-            view.Owner = json.Owner;
+            view.Owner = json.UserRef;
             view.Description = json.DescriptionText;
         }
 
         public bool CanHandle(string aggregateType, string eventType)
         {
             return aggregateType == "SimpleToDo.Aggregates.ToDoItem, SimpleToDo.Aggregates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-            && eventType == "SimpleToDo.Aggregates.SetDescription, SimpleToDo.Aggregates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+            && eventType == "SimpleToDo.Aggregates.DescriptionSet, SimpleToDo.Aggregates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
         }
 
         public bool CanHandle(string aggregateType)

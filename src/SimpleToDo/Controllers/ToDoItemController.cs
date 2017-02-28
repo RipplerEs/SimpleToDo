@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Security.Claims;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -28,34 +29,36 @@ namespace SimpleToDo.Controllers
 
 
         [HttpPost]
-        public ActionResult SetDescription(NewToDoItem toDoItem)
+        public ActionResult SetDescription([FromBody] NewToDoItem toDoItem)
         {
             var id = Guid.NewGuid();
             var version = -1;
 
-            //var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            //var result = _dispatcher.Execute(id, version,
-            //    new SetDescription(userRef: currentUserId,
-            //        descriptionText: toDoItem.Description));
+            var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var result = _dispatcher.Execute(id, version,
+                new SetDescription(userRef: currentUserId,
+                    descriptionText: toDoItem.Description));
 
-            //var error = result as CommandErrorResult<ToDoItem>;
-            //if (error != null)
-            //{
-            //    throw new RipplerAggregateException(error);
-            //}
+            var error = result as CommandErrorResult<ToDoItem>;
+            if (error != null)
+            {
+                throw new RipplerAggregateException(error);
+            }
 
-            //var newVersion = 0;
-            //ToDoItemView fetched = null;
+            var newVersion = -100;
+            ToDoItemView fetched = null;
 
-            //while (version < newVersion)
-            //{
-            //    fetched = _dbContext.ToDoItems.SingleOrDefault(c => c.Id == id);
-            //    if (fetched != null)
-            //        newVersion = fetched.Version;
-            //}
+            while (version > newVersion)
+            {
+                fetched = _dbContext.ToDoItems.SingleOrDefault(c => c.Id == id);
+                if (fetched != null)
+                    newVersion = fetched.Version;
+
+                Thread.Sleep(100);
+            }
 
 
-            return Ok();//Json(fetched);
+            return Json(fetched);
         }
 
         [HttpPut]

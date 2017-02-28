@@ -31,6 +31,11 @@ namespace SimpleToDo.Aggregates
 
         public void Apply(DescriptionSet @event)
         {
+            if (!_toDoItemState.Exists())
+            {
+                _toDoItemState = new ToDoItemState(owner: @event.UserRef);
+            }
+
             _toDoItemState.SetDescriptionText(@event.DescriptionText);
         }
         
