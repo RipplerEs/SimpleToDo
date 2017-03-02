@@ -7,3 +7,12 @@ C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\postdep
 C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\predeploy.sql
 C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.dll
 C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.pdb
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\bin\Debug\SimpleToDo.Database.dacpac
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\bin\Debug\SimpleToDo.Database.dll
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\bin\Debug\SimpleToDo.Database.pdb
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\Model.xml
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\refactor.xml
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\postdeploy.sql
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\predeploy.sql
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.dll
+C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.pdb

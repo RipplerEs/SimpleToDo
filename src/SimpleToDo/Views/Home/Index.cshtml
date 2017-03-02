@@ -4,12 +4,21 @@
 
 <div ng-app="toDoApp" ng-controller="toDoItemCtrl">
     <ul>
-
         <li ng-repeat="toDoItem in toDoList" class="list-unstyled form-inline">
-            <div class="checkbox">
-                <input type="checkbox" ng-model="toDoItem.isComplete"/>
+            <div ng-if="!isEditing(toDoItem)">
+                <div class="checkbox">
+                    <input type="checkbox" ng-model="toDoItem.isComplete" ng-click="complete(toDoItem)"/>
+                </div>
+                <span ng-click="setEdit(toDoItem)">{{toDoItem.description}}</span>
             </div>
-            {{toDoItem.description}}
+            <div ng-if="isEditing(toDoItem)">
+                <div class="checkbox">
+                    <input type="checkbox" disabled="disabled" ng-model="toDoItem.isComplete" />
+                </div>
+                <input type="text" ng-model="update.toDoItem.description" />
+                <Button type="button" ng-click="updateDescription()">Save</Button>
+                <Button type="button" ng-click="clearEdit()">Cancel</Button>
+            </div>
         </li>
 
         <li ng-if="states.showToDoForm" class="list-unstyled form-inline">
@@ -23,9 +32,6 @@
 
     </ul>
     <a ng-click="showToDoForm(true)" ng-if="!states.showToDoForm" class="btn btn-primary">Add ToDo</a>
-
-    {{new.toDoItem | json}}
-
 
     @*add javascript files here*@
     <script src="~/lib/angular/angular.js"></script>

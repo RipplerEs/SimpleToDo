@@ -11,13 +11,13 @@
 			<Metadata Name="CompatibilityMode" Value="130" />
 		</CustomData>
 		<CustomData Category="Reference" Type="SqlSchema">
-			<Metadata Name="FileName" Value="C:\USERS\DOUCE\DOCUMENTS\GITHUB\SIMPLETODO\SIMPLETODO.DATABASE\SIMPLETODO.DATABASE.DACPAC" />
+			<Metadata Name="FileName" Value="C:\USERS\RDOUCET\SOURCE\REPOS\SIMPLETODO\SIMPLETODO.DATABASE\SIMPLETODO.DATABASE.DACPAC" />
 			<Metadata Name="LogicalName" Value="SimpleToDo.Database.dacpac" />
 			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="SimpleToDo.Database.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\DOUCE\DOCUMENTS\GITHUB\SIMPLETODO\SIMPLETODO.DATABASE\OBJ\DEBUG\SIMPLETODO.DATABASE.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\RDOUCET\SOURCE\REPOS\SIMPLETODO\SIMPLETODO.DATABASE\OBJ\DEBUG\SIMPLETODO.DATABASE.DLL" />
 			<Metadata Name="AssemblyName" Value="SimpleToDo.Database" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -25,7 +25,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\douce\Documents\GitHub\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\rdoucet\Source\Repos\SimpleToDo\SimpleToDo.Database\obj\Debug\SimpleToDo.Database.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -39,6 +39,7 @@
 			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
 			<Property Name="IsTornPageProtectionOn" Value="False" />
 			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="CompatibilityMode" Value="130" />
 			<Property Name="PageVerifyMode" Value="3" />
 			<Property Name="DefaultLanguage" Value="" />
 			<Property Name="DefaultFullTextLanguage" Value="" />

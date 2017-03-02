@@ -44,30 +44,36 @@ namespace SimpleToDo.Controllers
             {
                 throw new RipplerAggregateException(error);
             }
-
-            var newVersion = -100;
-            ToDoItemView fetched = null;
-
-            while (version > newVersion)
-            {
-                fetched = _dbContext.ToDoItems.SingleOrDefault(c => c.Id == id);
-                if (fetched != null)
-                    newVersion = fetched.Version;
-
-                Thread.Sleep(100);
-            }
-
-
-            return Json(fetched);
+            return Ok();
         }
 
+
         [HttpPut]
-        public ActionResult Complete(Guid id, int version)
+        public ActionResult SetDescription([FromBody] DescriptionUpdate descriptionUpdate)
         {
             var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var result = _dispatcher.Execute(id,
-                version,
-                new Complete(userRef: currentUserId));
+            var result = _dispatcher.Execute(descriptionUpdate.Id, descriptionUpdate.Version,
+                new SetDescription(userRef: currentUserId,
+                    descriptionText: descriptionUpdate.Description));
+
+            var error = result as CommandErrorResult<ToDoItem>;
+            if (error != null)
+            {
+                throw new RipplerAggregateException(error);
+            }
+
+            return Ok();
+        }
+
+
+        [HttpPut()]
+        [Route("/Complete")]
+        public ActionResult Complete([FromBody] Models.ToDoItem.Complete complete)
+        {
+            var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var result = _dispatcher.Execute(complete.Id,
+                complete.Version,
+                new Aggregates.Complete(userRef: currentUserId));
 
             var error = result as CommandErrorResult<ToDoItem>;
             if (error != null)
@@ -82,8 +88,19 @@ namespace SimpleToDo.Controllers
         {
             var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var data = _dbContext.ToDoItems.Where(c => c.Owner == currentUserId);
+            Response.Headers.Add("Version", data.Sum(c=>c.Version).ToString());
 
             return Json(data);
+        }
+
+        [HttpHead]
+        public ActionResult GetVersion()
+        {
+            var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var data = _dbContext.ToDoItems.Where(c => c.Owner == currentUserId);
+            Response.Headers.Add("Version", data.Sum(c => c.Version).ToString());
+
+            return Ok();
         }
     }
 }
