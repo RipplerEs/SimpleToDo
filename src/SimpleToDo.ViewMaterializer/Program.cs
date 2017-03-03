@@ -34,7 +34,7 @@ namespace SimpleToDo.ViewMaterializer
             while (true)
             {
                 subscriptionHandler.Execute();
-                Thread.Sleep(100);
+                Thread.Sleep(10);
             }
         }
     }

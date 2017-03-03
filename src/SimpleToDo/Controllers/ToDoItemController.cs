@@ -87,7 +87,7 @@ namespace SimpleToDo.Controllers
             var data = _dbContext.ToDoItems.Where(c => c.Owner == currentUserId);
             Response.Headers.Add("Version", data.Sum(c=>c.Version).ToString());
 
-            return Json(data);
+            return Json(data.Where(c=>!c.IsComplete));
         }
 
         [Route("Version")]
