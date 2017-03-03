@@ -1,15 +1,12 @@
 using System;
 using System.Linq;
 using System.Security.Claims;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using RipplerES.CommandHandler;
 using SimpleToDo.Aggregates;
 using SimpleToDo.Data;
-using SimpleToDo.Models;
 using SimpleToDo.Models.ToDoItem;
+using Complete = SimpleToDo.Models.ToDoItem.Complete;
 
 namespace SimpleToDo.Controllers
 {
@@ -47,7 +44,7 @@ namespace SimpleToDo.Controllers
             return Ok();
         }
 
-
+        [Route("Update")]
         [HttpPut]
         public ActionResult SetDescription([FromBody] DescriptionUpdate descriptionUpdate)
         {
@@ -65,10 +62,9 @@ namespace SimpleToDo.Controllers
             return Ok();
         }
 
-
+        [Route("Complete")]
         [HttpPut()]
-        [Route("/Complete")]
-        public ActionResult Complete([FromBody] Models.ToDoItem.Complete complete)
+        public ActionResult Complete([FromBody] Complete complete)
         {
             var currentUserId = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var result = _dispatcher.Execute(complete.Id,
@@ -80,6 +76,7 @@ namespace SimpleToDo.Controllers
             {
                 throw new RipplerAggregateException(error);
             }
+
             return Ok();
         }
 
@@ -93,6 +90,7 @@ namespace SimpleToDo.Controllers
             return Json(data);
         }
 
+        [Route("Version")]
         [HttpHead]
         public ActionResult GetVersion()
         {
@@ -100,7 +98,7 @@ namespace SimpleToDo.Controllers
             var data = _dbContext.ToDoItems.Where(c => c.Owner == currentUserId);
             Response.Headers.Add("Version", data.Sum(c => c.Version).ToString());
 
-            return Ok();
+            return Json(data);
         }
     }
 }

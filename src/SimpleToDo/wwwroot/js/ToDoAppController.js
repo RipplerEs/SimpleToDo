@@ -2,16 +2,23 @@
     $scope.toDoList = {};
 
     $scope.states = {
-        showToDoForm: false,
+        showToDoForm: false
     };
 
+    $scope.ver = -1;
+    $scope.checkedVer = -1;
     $scope.new = { toDoItem: {} };
     $scope.update = { toDoItem: {} };
+    $scope.completeItem = { toDoItem: {} };
 
+    $scope.refresh = function() {
+        $http.get("/api/ToDoItem").success(function(data, status, headers) {
+            $scope.toDoList = data;
+            $scope.ver = headers()['version'];
+        });
+    }
 
-    $http.get("/api/ToDoItem").success(function(data) {
-        $scope.toDoList = data;
-    });
+    $scope.refresh();
 
     $scope.showToDoForm = function(show) {
         $scope.update = { toDoItem: {} };
@@ -42,16 +49,35 @@
     };
 
     $scope.updateDescription = function () {
-        $http.put("api/ToDoItem", $scope.update.toDoItem)
+        $http.put("api/ToDoItem/Update", $scope.update.toDoItem)
             .success(function () {
                 $scope.update = { toDoItem: {} }
             });
     };
 
-    $scope.complete = function () {
-        $http.put("api/ToDoItem/Complete", $scope.completeItem)
+    $scope.complete = function (model) {
+        $http.put("api/ToDoItem/Complete", model)
             .success(function (data) {
                 $scope.update = { toDoItem: {} }
+            })
+            .error(function(error) {
             });
     };
+
+    $scope.checkVer = function () {
+        $http.head("api/ToDoItem/Version")
+            .success(function (data, status, headers) {
+                $scope.checkedVer = headers()['version'];
+            })
+            .error(function (error) {
+            });
+    };
+
+    setInterval(function() {
+        $scope.checkVer();
+
+        if (parseInt($scope.checkedVer, 10) !== parseInt($scope.ver, 10)) {
+            $scope.refresh();
+        }
+    }, 150);
 }]);

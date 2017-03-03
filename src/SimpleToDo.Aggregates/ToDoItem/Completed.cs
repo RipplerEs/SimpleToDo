@@ -10,7 +10,6 @@ namespace SimpleToDo.Aggregates
         public Completed(Guid userRef)
         {
             UserRef = userRef;
-            throw new NotImplementedException();
         }
     }
 }
